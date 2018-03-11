@@ -22,6 +22,7 @@ export function addPostRequest(post) {
         name: post.name,
         title: post.title,
         content: post.content,
+        voteCount: post.voteCount,
       },
     }).then(res => dispatch(addPost(res.post)));
   };
@@ -76,6 +77,7 @@ export function editPostRequest(cuid, post) {
         name: post.name,
         title: post.title,
         content: post.content,
+        voteCount: post.voteCount,
       },
     }).then(() => dispatch(editPost(cuid, post)));
   };
